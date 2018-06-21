@@ -11,5 +11,4 @@ end
 if name_hash.empty?
   nil
 end
-smallest
 end
