@@ -3,7 +3,12 @@
 
 def key_for_min_value(name_hash)
 values = name_hash.collect do |a,b|
-  a 
+  smallest = a
+  if b < name_hash[a]
+    smallest = a
+  end
 end
-
+if name_hash.empty?
+  nil
+end
 end
