@@ -5,10 +5,14 @@ def key_for_min_value(name_hash)
 if name_hash.empty?
     nil
   end
-values = name_hash.collect do |a,b|
-  smallest = a
-  if b < name_hash[a]
-    smallest = a
+values = name_hash.collect {|a, b| b}
+keys = name_hash.collect {|a,b| a}
+minv = values[0]
+mink = keys[0]
+name_hash.each do |a,b|
+  if b < minv
+    mink = a
   end
 end
+mink
 end
